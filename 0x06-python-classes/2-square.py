@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""Class definition"""
+
+
 class Square:
     """
     A class to represent Square
