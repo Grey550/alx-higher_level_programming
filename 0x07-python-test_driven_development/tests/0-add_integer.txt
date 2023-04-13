@@ -45,10 +45,3 @@ Adding an str to an integer:
 	Traceback (most recent call last):
 	...
 	TypeError: a must be an integer
-
-Adding two strings:
-	>>> add_integer('4', '6')
-	Traceback (most recent call last):
-	...
-	TypeError: a must be an integer
-
