@@ -30,10 +30,6 @@ Adding 3 integers:
 	...
 	TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
-Adding the first positive integer to a negative integer:
-	>>> add_integer(60, -10)
-	50
-
 Adding no arguments:
 	>>> add_integer()
 	Traceback (most recent call last):
@@ -45,3 +41,9 @@ Adding an str to an integer:
 	Traceback (most recent call last):
 	...
 	TypeError: a must be an integer
+
+Adding a large float to a large float
+	>>> add_integer(float('inf'), 2)
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer
