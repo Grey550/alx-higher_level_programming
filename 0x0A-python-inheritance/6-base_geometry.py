@@ -7,8 +7,5 @@ class BaseGeometry:
     implemented.
     """
 
-    def __init__(self):
-        self.BaseGeometry = BaseGeometry
-
     def area(self):
         raise Exception("area() is not implemented")
