@@ -47,3 +47,9 @@ Adding a large float to a large float
 	Traceback (most recent call last):
 	...
 	OverflowError: cannot convert float infinity to integer
+
+Adding non-number with number:
+	 >>> add_integer([1], 4)
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: a must be an integer
