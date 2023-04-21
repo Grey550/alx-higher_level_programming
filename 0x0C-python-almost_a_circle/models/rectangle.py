@@ -94,3 +94,8 @@ class Rectangle(Base):
                 print(" ", end="")
             print("#" * self.__width, end="")
             print("")
+
+    def __str__(self):
+        """updates the rectangle"""
+        return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "
+                f"{self.__width}/{self.__height}")
