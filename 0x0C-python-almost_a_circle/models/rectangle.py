@@ -99,3 +99,14 @@ class Rectangle(Base):
         """updates the rectangle"""
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "
                 f"{self.__width}/{self.__height}")
+
+    def update(self, *args, **kwargs):
+        """"""
+        attr = ['id', 'width', 'height', 'x', 'y']
+
+        if args:
+            for i, arg in enumerate(args):
+                setattr(self, attr[i], arg)
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
