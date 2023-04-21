@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"""Importing base class from the base model"""
+"""importing base class from the base model"""
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Defines a class Rectangle"""
+    """defines a class Rectangle"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Instance of a rectangle
+        """instance of a rectangle
 
         Args:
             width: rectangle width
@@ -77,3 +77,7 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+        """returns the area value of the rectangle"""
+        return self.__width * self.__height
