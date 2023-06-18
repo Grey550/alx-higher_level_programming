@@ -13,8 +13,9 @@ if __name__ == "__main__":
                          passwd=sys.argv[2],
                          db=sys.argv[3], port=3306)
     cur = db.cursor()
+    name = sys.argv[4]
     cur.execute("SELECT * FROM states WHERE name = %s ORDER BY id ASC",
-                (argv[4],))
+                (name))
     rows = cur.fetchall()
     for r in rows:
         print(r)
