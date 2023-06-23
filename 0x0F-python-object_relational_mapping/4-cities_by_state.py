@@ -13,11 +13,11 @@ if __name__ == "__main__":
                          db=sys.argv[3],
                          port=3306)
     cur = db.cursor()
-    cur.execute("SELECT cities.id,
+    cur.execute("""SELECT cities.id,
                 cities.name, states.name FROM
                 cities JOIN states ON
-                cities.id=states.id
-                ORDER BY cities.id ASC")
+                states.id=cities.state_id
+                ORDER BY cities.id ASC""")
     rows = cur.fetchall()
     for r in rows:
         print(r)
