@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 script that takes in the name of a state as an
-argument 
+argument
 and lists all cities of that state
 """
 import MySQLdb
@@ -15,11 +15,11 @@ if __name__ == "__main__":
                          db=sys.argv[3],
                          port=3306)
     cur = db.cursor()
-    cur.execute("""SELECT 
+    cur.execute("""SELECT
                 cities.name
                 FROM
                 cities JOIN states ON
-                states.id=cities.state_id 
+                states.id=cities.state_id
                 WHERE states.name LIKE %s
                 ORDER BY cities.id ASC""", (sys.argv[4],))
     rows = cur.fetchall()
@@ -27,5 +27,3 @@ if __name__ == "__main__":
     print(*temp, sep=", ")
     cur.close()
     db.close()
-
-
